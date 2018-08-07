@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="cqA-pH-1sH"/>
+                        <viewControllerLayoutGuide type="bottom" id="IXm-25-j14"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KGA-4y-I4C">
+                                <rect key="frame" x="166" y="170" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jwK-DW-pOm">
+                                <rect key="frame" x="147.5" y="313.5" width="80" height="40"/>
+                                <color key="backgroundColor" red="1" green="0.79846834899999997" blue="0.77162873060000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="8t6-lv-9DR"/>
+                                    <constraint firstAttribute="width" constant="80" id="9si-Vf-bGh"/>
+                                </constraints>
+                                <state key="normal" title="开始录音">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="recordBtnAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="eYP-ev-a01"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="KGA-4y-I4C" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="7Qh-is-U6p"/>
+                            <constraint firstItem="KGA-4y-I4C" firstAttribute="top" secondItem="cqA-pH-1sH" secondAttribute="bottom" constant="150" id="JeL-PC-X9c"/>
+                            <constraint firstItem="jwK-DW-pOm" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="h90-dK-5tT"/>
+                            <constraint firstItem="jwK-DW-pOm" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="iyc-9e-VOe"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="durationLabel" destination="KGA-4y-I4C" id="C5h-DK-Gfr"/>
+                        <outlet property="recordBtn" destination="jwK-DW-pOm" id="WWn-gb-Pph"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+</document>
