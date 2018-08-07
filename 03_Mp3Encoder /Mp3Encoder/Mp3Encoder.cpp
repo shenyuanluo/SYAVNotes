@@ -44,13 +44,13 @@ bool Mp3Encoder::InitParam(const char* pcmFilePath, const char* mp3FilePath, int
     m_pcmFile = fopen(pcmFilePath, "rb");   // 打开 PCM 文件
     if (NULL == m_pcmFile)
     {
-        printf("打开 PCM 文件失败！");
+        printf("打开 PCM 文件失败！\n");
         return false;
     }
     m_mp3File = fopen(mp3FilePath, "wb+");  // 打开 MP3 文件
     if (NULL == m_mp3File)
     {
-        printf("打开 MP3 文件失败！");
+        printf("打开 MP3 文件失败！\n");
         return false;
     }
     m_lameClient = lame_init(); //  初始化 lame

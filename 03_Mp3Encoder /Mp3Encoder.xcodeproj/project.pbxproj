@@ -7,8 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1454F436210821700047A3EC /* libmp3lame.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1454F435210821700047A3EC /* libmp3lame.a */; };
 		14D0C27C21074ED700C36086 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 14D0C27B21074ED700C36086 /* main.cpp */; };
-		14D0C2892107561D00C36086 /* libmp3lame.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 14D0C2872107561D00C36086 /* libmp3lame.a */; };
 		14D0C28C2107566600C36086 /* Mp3Encoder.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 14D0C28A2107566600C36086 /* Mp3Encoder.cpp */; };
 /* End PBXBuildFile section */
 
@@ -25,10 +25,10 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		1454F433210821700047A3EC /* lame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = lame.h; sourceTree = "<group>"; };
+		1454F435210821700047A3EC /* libmp3lame.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libmp3lame.a; sourceTree = "<group>"; };
 		14D0C27821074ED700C36086 /* Mp3Encoder */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Mp3Encoder; sourceTree = BUILT_PRODUCTS_DIR; };
 		14D0C27B21074ED700C36086 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
-		14D0C2852107561D00C36086 /* lame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = lame.h; sourceTree = "<group>"; };
-		14D0C2872107561D00C36086 /* libmp3lame.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libmp3lame.a; sourceTree = "<group>"; };
 		14D0C28A2107566600C36086 /* Mp3Encoder.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Mp3Encoder.cpp; sourceTree = "<group>"; };
 		14D0C28B2107566600C36086 /* Mp3Encoder.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Mp3Encoder.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -38,13 +38,46 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				14D0C2892107561D00C36086 /* libmp3lame.a in Frameworks */,
+				1454F436210821700047A3EC /* libmp3lame.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1454F430210821700047A3EC /* fat-lame */ = {
+			isa = PBXGroup;
+			children = (
+				1454F431210821700047A3EC /* include */,
+				1454F434210821700047A3EC /* lib */,
+			);
+			path = "fat-lame";
+			sourceTree = "<group>";
+		};
+		1454F431210821700047A3EC /* include */ = {
+			isa = PBXGroup;
+			children = (
+				1454F432210821700047A3EC /* lame */,
+			);
+			path = include;
+			sourceTree = "<group>";
+		};
+		1454F432210821700047A3EC /* lame */ = {
+			isa = PBXGroup;
+			children = (
+				1454F433210821700047A3EC /* lame.h */,
+			);
+			path = lame;
+			sourceTree = "<group>";
+		};
+		1454F434210821700047A3EC /* lib */ = {
+			isa = PBXGroup;
+			children = (
+				1454F435210821700047A3EC /* libmp3lame.a */,
+			);
+			path = lib;
+			sourceTree = "<group>";
+		};
 		14D0C26F21074ED700C36086 = {
 			isa = PBXGroup;
 			children = (
@@ -64,45 +97,12 @@
 		14D0C27A21074ED700C36086 /* Mp3Encoder */ = {
 			isa = PBXGroup;
 			children = (
-				14D0C2822107561D00C36086 /* lame_x86_64 */,
+				1454F430210821700047A3EC /* fat-lame */,
 				14D0C27B21074ED700C36086 /* main.cpp */,
 				14D0C28A2107566600C36086 /* Mp3Encoder.cpp */,
 				14D0C28B2107566600C36086 /* Mp3Encoder.h */,
 			);
 			path = Mp3Encoder;
-			sourceTree = "<group>";
-		};
-		14D0C2822107561D00C36086 /* lame_x86_64 */ = {
-			isa = PBXGroup;
-			children = (
-				14D0C2832107561D00C36086 /* include */,
-				14D0C2862107561D00C36086 /* lib */,
-			);
-			path = lame_x86_64;
-			sourceTree = "<group>";
-		};
-		14D0C2832107561D00C36086 /* include */ = {
-			isa = PBXGroup;
-			children = (
-				14D0C2842107561D00C36086 /* lame */,
-			);
-			path = include;
-			sourceTree = "<group>";
-		};
-		14D0C2842107561D00C36086 /* lame */ = {
-			isa = PBXGroup;
-			children = (
-				14D0C2852107561D00C36086 /* lame.h */,
-			);
-			path = lame;
-			sourceTree = "<group>";
-		};
-		14D0C2862107561D00C36086 /* lib */ = {
-			isa = PBXGroup;
-			children = (
-				14D0C2872107561D00C36086 /* libmp3lame.a */,
-			);
-			path = lib;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -285,6 +285,7 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Mp3Encoder/lame_x86_64/lib",
+					"$(PROJECT_DIR)/Mp3Encoder/fat-lame/lib",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -297,6 +298,7 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Mp3Encoder/lame_x86_64/lib",
+					"$(PROJECT_DIR)/Mp3Encoder/fat-lame/lib",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};

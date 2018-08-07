@@ -19,8 +19,11 @@
 int main(int argc, const char * argv[])
 {
     Mp3Encoder encoder;
-    encoder.InitParam("XinWenLianBo.wav", "XinWenLianBo.mp3", SAMPLE_RATE, NUM_CHANNELs, BIT_RATE);
-    encoder.StartEncode();
+    bool ret = encoder.InitParam("XinWenLianBo.wav", "XinWenLianBo.mp3", SAMPLE_RATE, NUM_CHANNELs, BIT_RATE);
+    if (ret)
+    {
+        encoder.StartEncode();
+    }
     
     return 0;
 }
